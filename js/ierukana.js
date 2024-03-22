@@ -25,7 +25,7 @@ ImasCg.Ierukana = function () {
 
 	//var jsonData = null;
 	var numOfIdols = {'all': 0, 'as': 0, 'af': 0, 'eu': 0, 'na': 0, 'sa': 0, 'oc': 0 };
-	var numOfRemains = {'all': 0, 'as': 0, 'af': 0, 'eu': 0, 'na': 0, 'sa': 0, 'oc': 0};
+	var numOfRemains = {'all': 0, 'as': 0, 'af': 0, 'eu': 0, 'na': 0, 'sa': 0, 'oc': 0 };
 
 	var compare_mode = null;
 	var difficulty = null;
