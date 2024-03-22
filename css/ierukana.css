@@ -69,27 +69,51 @@ table {
 	color: red;
 }
 
-#cu-header {
+#as-header {
 	color: white;
-	background-color: deeppink;
+	background-color: pink;
 
 }
-#cu-header > th {
+#as-header > th {
 	padding: 4px;
 }
 
-#co-header {
+#af-header {
 	color: white;
 	background-color: blue;
 }
-#co-header > th {
+#af-header > th {
 	padding: 4px;
 }
 
-#pa-header {
+#eu-header {
 	color: white;
 	background-color: orange;
 }
-#pa-header > th {
+#eu-header > th {
+	padding: 4px;
+}
+
+#na-header {
+	color: white;
+	background-color: gray;
+}
+#na-header > th {
+	padding: 4px;
+}
+
+#sa-header {
+	color: white;
+	background-color: yellow;
+}
+#sa-header > th {
+	padding: 4px;
+}
+
+#oc-header {
+	color: white;
+	background-color: green;
+}
+#oc-header > th {
 	padding: 4px;
 }
