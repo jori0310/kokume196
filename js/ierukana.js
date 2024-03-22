@@ -20,7 +20,7 @@ ImasCg.Ierukana = function () {
 		'alreadyAnswer': 'その国はもう解答済みです。',
 		'notExist': '該当する名前が見つかりません。',
 	};
-	var THREEE_ATTRIBUTES_ARRAY = ['as', 'af', 'eu', 'na', 'sa', 'oc'];
+	var THREE_ATTRIBUTES_ARRAY = ['as', 'af', 'eu', 'na', 'sa', 'oc'];
 	var COLUMNS_IN_ROW = 10;
 
 	//var jsonData = null;
