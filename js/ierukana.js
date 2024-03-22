@@ -20,7 +20,7 @@ ImasCg.Ierukana = function () {
 		'alreadyAnswer': 'その国はもう解答済みです。',
 		'notExist': '該当する名前が見つかりません。',
 	};
-	var THREE_ATTRIBUTES_ARRAY = ['as', 'af', 'eu', 'na', 'sa', 'oc'];
+	var SIX_ATTRIBUTES_ARRAY = ['as', 'af', 'eu', 'na', 'sa', 'oc'];
 	var COLUMNS_IN_ROW = 10;
 
 	//var jsonData = null;
@@ -66,7 +66,7 @@ ImasCg.Ierukana = function () {
 
 	var updateIdolsNum = function () {
 		$('#num-of-remain').text(numOfRemains['all']);
-		$.each(THREE_ATTRIBUTES_ARRAY, function(index, attr) {
+		$.each(SIX_ATTRIBUTES_ARRAY, function(index, attr) {
 			$('#' + attr + '-idols span.remain').text('あと' + numOfRemains[attr] + '人');
 		});
 	};
@@ -80,7 +80,7 @@ ImasCg.Ierukana = function () {
 		});
 
 		numOfRemains = $.extend(true, {}, numOfIdols);
-		$.each(THREE_ATTRIBUTES_ARRAY, function(index, attr) { initTableByAttribute(attr); });
+		$.each(SIX_ATTRIBUTES_ARRAY, function(index, attr) { initTableByAttribute(attr); });
 		updateIdolsNum();
 	};
 
@@ -268,7 +268,7 @@ ImasCg.Ierukana = function () {
 			var innerInit = function () {
 				numOfIdols['all'] = jsonData.idols.length;
 				numOfRemains['all'] = numOfIdols['all'];
-				$.each(THREE_ATTRIBUTES_ARRAY, function(index, attr) {
+				$.each(SIX_ATTRIBUTES_ARRAY, function(index, attr) {
 					numOfIdols[attr] = numOfAllIdolsByAttribute(attr);
 					numOfRemains[attr] = numOfIdols[attr];
 					initTableByAttribute(attr);
