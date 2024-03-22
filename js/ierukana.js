@@ -17,15 +17,15 @@ ImasCg.Ierukana = function () {
 	};
 	var MESSAGE = {
 		'gameClear': 'ゲームクリア！',
-		'alreadyAnswer': 'その子はもう解答済みです。',
+		'alreadyAnswer': 'その国はもう解答済みです。',
 		'notExist': '該当する名前が見つかりません。',
 	};
-	var THREE_ATTRIBUTES_ARRAY = ['cu', 'co', 'pa'];
+	var THREE_ATTRIBUTES_ARRAY = ['as', 'af', 'eu', 'na', 'sa', 'oc'];
 	var COLUMNS_IN_ROW = 10;
 
 	//var jsonData = null;
-	var numOfIdols = {'all': 0, 'cu': 0, 'co': 0, 'pa': 0 };
-	var numOfRemains = {'all': 0, 'cu': 0, 'co': 0, 'pa': 0 };
+	var numOfIdols = {'all': 0, 'as': 0, 'af': 0, 'eu': 0, 'na': 0, 'sa': 0, 'oc': 0 };
+	var numOfRemains = {'all': 0, 'as': 0, 'af': 0, 'eu': 0, 'na': 0, 'sa': 0, 'oc': 0};
 
 	var compare_mode = null;
 	var difficulty = null;
@@ -145,13 +145,13 @@ ImasCg.Ierukana = function () {
 		var tweetText = '';
 		if (numOfRemains['all'] == 0) {
 			var job = {
-				'easy':'アイドルマスター',
-				'normal':'アイドルマスター☆',
-				'hard':'アイドルマスター☆☆',
+				'easy':'国名マスター',
+				'normal':'国名マスター',
+				'hard':'国名マスター',
 			};
-			tweetText = 'あなたは ' + clearTime + ' でアイドル'
-				+ numOfIdols['all'] + '人の名前を全て言えた'
-				+ job[difficulty] + 'です。最後に言ったアイドルは' + lastIdolName + 'です。';
+			tweetText = 'あなたは ' + clearTime + ' で国'
+				+ numOfIdols['all'] + 'か国の名前を全て言えた'
+				+ job[difficulty] + 'です。最後に言った国名は' + lastIdolName + 'です。';
 		} else {
 			var forgetIdols = jsonData.idols.filter(function(v) {
 				return !v.answered;
@@ -160,11 +160,11 @@ ImasCg.Ierukana = function () {
 
 			tweetText = 'あなたは ' + clearTime + ' かけて'
 				+ (numOfIdols['all'] - numOfRemains['all'])
-				+ '人のアイドルを言うことができました。'
+				+ 'か国の国を言うことができました。'
 				+ oneForgetIdol.full_name + ' 等、' + numOfRemains['all']
-				+ '人の名前を言えませんでした。精進しましょう。';
+				+ 'か国の名前を言えませんでした。';
 		}
-		var resultTweet = 'https://twitter.com/intent/tweet?hashtags=シンデレラガールズ言えるかな&text='
+		var resultTweet = 'https://twitter.com/intent/tweet?hashtags国名言えるかな&text='
 		resultTweet = resultTweet + tweetText + SITE_URL;
 		window.open(encodeURI(resultTweet));
 	};
@@ -233,7 +233,7 @@ ImasCg.Ierukana = function () {
 	var initTableByAttribute = function (attr) {
 		var tableId = '#' + attr + '-idols';
 
-		$(tableId + ' span.remain').text('あと' + numOfRemains[attr] + '人');
+		$(tableId + ' span.remain').text('あと' + numOfRemains[attr] + 'か国');
 		$(tableId + ' tbody').html('');
 
 		var $tr = $('<tr></tr>');
