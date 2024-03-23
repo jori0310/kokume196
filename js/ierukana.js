@@ -67,7 +67,7 @@ ImasCg.Ierukana = function () {
 	var updateIdolsNum = function () {
 		$('#num-of-remain').text(numOfRemains['all']);
 		$.each(THREE_ATTRIBUTES_ARRAY, function(index, attr) {
-			$('#' + attr + '-idols span.remain').text('あと' + numOfRemains[attr] + '人');
+			$('#' + attr + '-idols span.remain').text('あと' + numOfRemains[attr] + 'か国');
 		});
 	};
 
